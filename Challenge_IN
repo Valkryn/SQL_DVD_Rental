@@ -1,0 +1,10 @@
+Challenge -
+Get the customers whose name are Jake, John ,Jared and Julie
+
+Solution -
+  SELECT * FROM customer
+	WHERE first_name IN ('John' , 'Jake' , 'Jared' , 'Julie') ;
+  
+  // The IN operator searches for the provided values.  
+ //Alt one could write 	WHERE first_name = 'John' OR first_name ='Jake' OR first_name ='Jared' OR first_name ='Julie' ;
+ //But its easier and shorter to use the IN operator
