@@ -1,0 +1,14 @@
+Challenge -
+Find how many different payment amounts customer usually pay.
+
+Solution -
+SELECT COUNT(DISTINCT(amount)) FROM payment; // returns 19
+
+//
+What I learned
+COUNT simply returns the number of rows in a table 
+a query like 
+COUNT(*)
+or COUNT(amount)
+would return the same number. 
+But in our case, I combined it with DISTINCT which would lower the number since DISTINCT grabs unique values and doesn't count duplicates 
