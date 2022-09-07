@@ -1,0 +1,12 @@
+Situation - We want to send out a promotional email to our existing customers!
+
+Challenge - Use SELECT statement to grab the first and last names of every customer and their email address.
+
+SELECT first_name , last_name , email FROM customer;
+
+//
+What I learned
+the tables dont have to be in order from how the DB has it as; 
+I could have said email , last_name , first_name and it would work all the same. 
+Using * can be slow depending on hhow big the DB is. 
+
