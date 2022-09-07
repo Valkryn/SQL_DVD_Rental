@@ -1,0 +1,40 @@
+Challenge 1- 
+How much has each customer(id) spent as of now.
+
+Solution - 
+SELECT customer_id , SUM(amount) FROM payment
+	GROUP BY customer_id
+	ORDER BY SUM(amount);
+  
+Challenge 2 -
+How much payments has each customer(id) made
+
+Solution-
+SELECT customer_id , COUNT(payment) FROM payment 
+GROUP BY customer_id
+ORDER BY customer_id;
+
+Challenge 3 -
+We have 2 different staff members, with staff ID 1 and 2. we want to give a bonus to the staff member that handled the most payments(in terms of payments processed and 
+not total dollar amount). How many payments did each staff member handle and who gets the bonus.
+
+Solution - 
+SELECT staff_id , COUNT(amount) FROM payment
+	GROUP BY staff_id
+	ORDER BY COUNT(amount) DESC ;
+
+Challenge 4 -
+Corporate HQ is conducting a study in the relationship between replacement cost and movie ratings.What is the average replacement cost per MPAA rating?
+
+Solution -
+SELECT rating , ROUND(AVG(replacement_cost),2) FROM film
+	GROUP BY rating;
+  
+ Challenge 5 -
+ We are running a promotion to reward our top 5 customers with coupons. What are the customers with ids of the top 5 customers by total spend?
+ 
+ Solution-
+ SELECT customer_id , SUM(amount) FROM payment
+	GROUP BY customer_id
+	ORDER BY SUM(amount) DESC
+	LIMIT 5;
