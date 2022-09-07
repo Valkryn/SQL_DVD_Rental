@@ -1,0 +1,16 @@
+Challenge 1 -
+How many people in the database names starts with the letter "J" ?
+
+Solution - 
+  SELECT COUNT(first_name) FROM customer
+	WHERE first_name ILIKE ('J%');
+  
+  //The keyword LIKE = case-sensitive ; ILIKE = case-insensitive
+  
+Challenge 2 -
+  How many people in the database names have the characters 'er' in it.
+  
+ Solution - 
+    SELECT COUNT(first_name) FROM customer
+    WHERE first_name ILIKE ('%er%');
+
