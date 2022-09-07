@@ -1,0 +1,15 @@
+Situation  - 
+An international visitor isn't familiar with MPAA movie ratings (PG, PG-13 ,etc etc) ; We want to know the types of ratings we have in our 
+database.
+
+Challenge - 
+Retireve the distinct rating types our films could  have in our database.
+
+My Answer-
+SELECT DISTINCT(rating) FROM film;
+
+
+//
+What I learned - 
+Using distinct allows us to retrieve unique values from the corresponding chart we are looking at.
+Also, ( ) are optional when. 'DISTINCT rating' is a perfectly fine answer
