@@ -1,0 +1,34 @@
+Challenge 1 -
+A customer forgot their wallet in our store! We need to track down their email to inform them.
+What is the email address for the customer whose name is Nancy Thomas.
+
+Solution - 
+
+SELECT first_name , last_name , email FROM customer
+	WHERE first_name = 'Nancy' AND last_name = 'Thomas'; 
+  //Results - "Nancy"	"Thomas"	"nancy.thomas@sakilacustomer.org"
+
+//Note : I could've have queried just email but i included first and last name to further show that the name matches. 
+
+Challenge 2 -
+A customer wants to know what the movie 'Outlaw Hanky' is about.
+Could you give them the description for the movie?
+
+Solution - 
+SELECT title, description FROM film
+	WHERE title = 'Outlaw Hanky';
+  
+  //Results "Outlaw Hanky"	"A Thoughtful Story of a Astronaut And a Composer who must Conquer a Dog in The Sahara Desert"
+
+Challenge 3 - 
+A customer is late on their movie return,and we've mailed them a letter to their address at 259 Ipoh Drive.
+We should also call them on their phone to let them know. 
+Can we find the phone number for the customer who lives at that address?
+
+Solution - SELECT address , phone FROM address
+	WHERE address = '259 Ipoh Drive';
+  
+  //Results "259 Ipoh Drive"	"419009857119"
+//What I learned - Operators, != 'does not equal and operators can be combined in one STATEMENT
+  
+  
