@@ -1,0 +1,41 @@
+Aggregate function take multiple inputs to return 1 output.
+Most common ones are AVG, SUM , COUNT , MAX, MIN.
+
+Challenge 1 -
+Return the minimum replacement cost in the database.
+
+Solution -
+SELECT MIN(replacement_cost) FROM film;
+
+//Alternatively you could also say 
+//  SELECT replacement_cost FROM film
+//	ORDER BY replacement_cost
+//	LIMIT 1;
+//This method sorts the cost by replacement_cost and limit the output to 1.
+
+Challenge 2 -
+Return the maximum replacement cost in the database.
+
+Solution -
+SELECT MAX(replacement_cost) FROM film
+
+//Alternatively you could also use ORDER BY DESC
+
+Challenge 3 -
+Return the average replacement cost in the database.
+
+Solution -
+SELECT ROUND(AVG(replacement_cost),2) FROM film;
+//ROUND() function takes 2 parameters ; P1 = the output/value(aggregate) P2= the decimal value we want to round to. ;; ROUND(p1,p2)
+
+
+Challenge 4 -
+Return the total cost of replacing all films in the database
+
+Solution -
+SELECT SUM(replacement_cost) FROM film;
+
+
+
+
+
