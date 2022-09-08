@@ -9,3 +9,29 @@ SELECT first_name , last_name , address FROM customer
 //If a column name is found on both tables, you can (and should) specify from what table you want to use. EX: address_id is found on both tables
 // so we can use customer.address_id or address.address_id
 
+Challenge 2 - 
+California sales tax laws have changed and we need to alert our customers to this through email.
+What are the emails of the customers who live in California?
+
+Solution -
+SELECT first_name , last_name,  email FROM customer 
+	INNER JOIN address
+		ON customer.address_id = address.address_id
+	WHERE district = 'California'
+	
+Challenge 3 -
+A customer walks in and is a huge fan of Nick Wahlberg and wants to know which movies he is in.
+Get a list of all the movies Nick Wahlberg is in. 
+
+Solution - 
+Select first_name, last_name,  film.title from actor 
+	INNER JOIN film_actor
+		ON actor.actor_id = film_actor.actor_id
+	INNER JOIN film
+		ON film_actor.film_id = film.film_id
+	WHERE first_name = 'Nick' AND last_name = 'Wahlberg';
+	
+// alternatively I learned that I can say first_name || ' ' || last_name AS full_name 
+//to combine the first and last name as 1 column ; note:this is a PostgreSQL method.
+
+
