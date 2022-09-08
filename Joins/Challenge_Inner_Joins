@@ -1,0 +1,11 @@
+Challenge 1 -
+1.Find the addresses of the customers who registered.
+
+Solution -
+SELECT first_name , last_name , address FROM customer 
+	INNER JOIN address
+		ON customer.address_id = address.address_id;
+    
+//If a column name is found on both tables, you can (and should) specify from what table you want to use. EX: address_id is found on both tables
+// so we can use customer.address_id or address.address_id
+
